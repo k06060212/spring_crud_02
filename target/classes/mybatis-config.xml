@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE configuration
+ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration> 
+<!-- typeAliases를 이용하면 parameterType이나 resultType에 사용하는 클래스의 이름을
+	'org.gokuma.domain'은 생략한 채로 표현하는 것이 가능하다. -->
+	<typeAliases>
+		<package name="org.gokuma.domain"/>
+	</typeAliases>
+
+</configuration>

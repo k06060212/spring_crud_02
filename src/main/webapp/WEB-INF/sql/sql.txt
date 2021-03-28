@@ -1,0 +1,25 @@
+CREATE TABLE tbl_board(
+	bno INT NOT NULL AUTO_INCREMENT,
+	title VARCHAR(200) NOT NULL,
+	content TEXT NULL,
+	writer VARCHAR(50) NOT NULL,
+	regdate TIMESTAMP NOT NULL DEFAULT NOW(),
+	viewcnt INT DEFAULT 0,
+	PRIMARY KEY (bno)
+);
+
+-- 새로운 게시물의 등록에 사용하는 SQL
+INSERT INTO tbl_board (title, content, writer)
+VALUES('제목입니다.','내용입니다.','user00');
+
+-- 게시물의 조회에 사용하는 SQL
+SELECT * FROM tbl_board WHERE bno = 1;
+
+-- 게시물의 전체 목록에 사용하는 SQL
+SELECT * FROM tbl_board WHERE bno > 0 ORDER BY bno DESC;
+
+-- 게시물 수정에 사용하는 SQL
+UPDATE tbl_board SET title='수정된 제목' WHERE bno=1;
+
+-- 게시물 삭제에 사용하는 SQL
+DELETE FROM tbl_board WHERE bno = 1;
