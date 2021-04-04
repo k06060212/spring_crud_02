@@ -129,7 +129,7 @@
 				if(result == 'SUCCESS'){
 					
 					alert("등록 되었습니다.");
-					getAllList();
+// 					getAllList();
 					getPageList(replyPage);
 				}
 			}
